@@ -13,7 +13,7 @@ vim-anywhere currently supports OSX and any Linux distro running Gnome.
 
 ## Installation
 
-### Requirements
+#### Requirements
 
 __OSX:__
 
@@ -25,7 +25,7 @@ __Linux:__
 - Gnome (or a derivative)
 - gVim
 
-### Install
+#### Install
 
 ```bash
 curl -fsSL https://raw.github.com/cknadler/vim-anywhere/master/install | sh
@@ -38,13 +38,13 @@ finishes, your keyboard preferences will be opened. Define a shortcut for
 `VimAnywhere` under `Services` and you are good to go. See
 [Keybinding](#keybinding) for more details.
 
-### Update
+#### Update
 
 ```bash
 ~/.vim-anywhere/update
 ```
 
-### Uninstall
+#### Uninstall
 
 ```bash
 ~/.vim-anywhere/uninstall
@@ -52,7 +52,7 @@ finishes, your keyboard preferences will be opened. Define a shortcut for
 
 ## Usage
 
-### Keybinding
+#### Keybinding
 
 __OSX:__ ( default = unbound, suggested = ctrl+cmd+v )
 
@@ -68,7 +68,7 @@ __Linux:__ ( default = ctrl+alt+v )
 $ gconftool -t str --set /desktop/gnone/keybindings/vim-anywhere/binding <custom binding>
 ```
 
-### Previous Files
+#### Previous Files
 
 vim-anywhere creates a temporary file in `/tmp/vim-anywhere` when
 invoked. This file sticks around until you restart your system.
