@@ -31,7 +31,7 @@ __Linux:__
 curl -fsSL https://raw.github.com/cknadler/vim-anywhere/master/install | sh
 ```
 
-__OSX caveat:__ key binding is unbound by default. See [keybinding][#keybinding]
+__OSX caveat:__ key binding is unbound by default. See [keybinding](#keybinding)
 for details.
 
 
@@ -47,9 +47,7 @@ for details.
 ~/.vim-anywhere/uninstall
 ```
 
-## Usage
-
-#### Keybinding
+## Keybinding
 
 __OSX:__ ( default = unbound, suggested = ctrl+cmd+v )
 
@@ -65,10 +63,10 @@ __Linux:__ ( default = ctrl+alt+v )
 $ gconftool -t str --set /desktop/gnone/keybindings/vim-anywhere/binding <custom binding>
 ```
 
-#### Previous Files
+## Previous Files
 
 vim-anywhere creates a temporary file in `/tmp/vim-anywhere` when
-invoked. This file sticks around until you restart your system.
+invoked. These files stick around until you restart your system.
 
 You can list all of your recent files with:
 
