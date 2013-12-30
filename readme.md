@@ -6,8 +6,10 @@ easier to use Vim for more than just code...and now it is!
 ![demo](assets/demo.gif)
 
 Map vim-anywhere to the key combination of your choice. Once invoked, it will
-open a buffer in MacVim. Close it and it's contents are copied to your
-clipboard and your previous application is refocused.
+open a buffer in MacVim (or gVim). Close it and it's contents are copied to
+your clipboard and your previous application is refocused.
+
+vim-anywhere currently supports OSX and any Linux distro running Gnome.
 
 ## Installation
 
@@ -17,10 +19,12 @@ __Install:__
 curl -fsSL https://raw.github.com/cknadler/vim-anywhere/master/install | sh
 ```
 
-Once installation finishes, your keyboard preferences will be opened. Define
-a shortcut for `VimAnywhere` under `Services` and you are good to go.
+_OSX CAVEAT:_
 
-![keyboard shortcut](assets/shortcut.png)
+The key binding is NOT defined automatically on OSX. Once installation
+finishes, your keyboard preferences will be opened. Define a shortcut for
+`VimAnywhere` under `Services` and you are good to go. See
+[Keybinding](#keybinding) for more details.
 
 __Update:__
 
@@ -34,12 +38,33 @@ __Uninstall:__
 ~/.vim-anywhere/uninstall
 ```
 
+## Keybinding
+
+__OSX:__
+
+They keyboard shortcut for invoking vim-anywhere is undefined by default on
+OSX. To set it, navigate to "System Preferences" -> "Keyboard" -> "Shortcuts".
+Then fill in the following:
+
+![keyboard shortcut](assets/shortcut.png)
+
+__Linux:__ ( default = <ctrl><alt>v )
+
+```
+$ gconftool -t str --set /desktop/gnone/keybindings/vim-anywhere/binding <custom binding>
+```
+
 ## Requirements
 
 __OSX:__
 
 - [Homebrew](http://brew.sh/)
-- MacVim : `brew install macvim`
+- MacVim: `brew install macvim`
+
+__Linux:__
+
+- Gnome (or a derivative)
+- gVim
 
 ## Why?
 
@@ -51,25 +76,25 @@ Vim to do more than just edit code.
 
 ## How does it work?
 
-vim-anywhere creates a temporary file in `/private/tmp/vim-anywhere` when
+vim-anywhere creates a temporary file in `/tmp/vim-anywhere` when
 invoked. This file sticks around until you restart your system.
 
 You can list all of your recent invocations with:
 
 ```bash
-$ ls /private/tmp/vim-anywhere
+$ ls /tmp/vim-anywhere
 ```
 
 Reopen your most recent invocation:
 
 ```bash
-$ vim $( ls /private/tmp/vim-anywhere | sort -r | head -n 1 )
+$ vim $( ls /tmp/vim-anywhere | sort -r | head -n 1 )
 ```
 
 ## Roadmap
 
-- &#x2610; Find a way to automate setting vim-anywhere's keyboard shortcut
-- &#x2610; Add GVim (and Linux) support
+- &#x2610; Find a way to automate setting vim-anywhere's keyboard shortcut (OSX)
+- &#x2612; Add gVim (and Linux) support
 - &#x2610; Speed up opening MacVim (disable animations?)
 
 ## Contributing
