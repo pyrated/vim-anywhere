@@ -31,12 +31,9 @@ __Linux:__
 curl -fsSL https://raw.github.com/cknadler/vim-anywhere/master/install | sh
 ```
 
-__OSX CAVEAT:__
+__OSX caveat:__ key binding is unbound by default. See [keybinding][#keybinding]
+for details.
 
-The key binding is NOT defined automatically on OSX. Once installation
-finishes, your keyboard preferences will be opened. Define a shortcut for
-`VimAnywhere` under `Services` and you are good to go. See
-[Keybinding](#keybinding) for more details.
 
 #### Update
 
@@ -56,9 +53,9 @@ finishes, your keyboard preferences will be opened. Define a shortcut for
 
 __OSX:__ ( default = unbound, suggested = ctrl+cmd+v )
 
-They keyboard shortcut for invoking vim-anywhere is undefined by default on
-OSX. To set it, navigate to "System Preferences" -> "Keyboard" -> "Shortcuts"
-and fill in the following:
+They keyboard shortcut for invoking vim-anywhere is unbound by default on OSX.
+The installation script will automatically open
+"System Preferences" -> "Keyboard" -> "Shortcuts". Fill in the following:
 
 ![keyboard shortcut](assets/shortcut.png)
 
